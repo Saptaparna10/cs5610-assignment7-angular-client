@@ -1,0 +1,54 @@
+<div  class="border rounded mt-3" [hidden]="!(widgets!=null  &&  widgets.length>0)" >
+  <div *ngFor="let widget of widgets" class="border-bottom p-3">
+    <div [ngSwitch]="widget.type">
+      <div *ngSwitchCase="'HEADING'">
+        <div [ngSwitch]="widget.size">
+          <!--<h1>Heading</h1>-->
+          <h1 *ngSwitchCase="'1'">{{widget.text}}</h1>
+          <h2 *ngSwitchCase="'2'">{{widget.text}}</h2>
+          <h3 *ngSwitchCase="'3'">{{widget.text}}</h3>
+          <h4 *ngSwitchCase="'4'">{{widget.text}}</h4>
+          <h5 *ngSwitchCase="'5'">{{widget.text}}</h5>
+          <h6 *ngSwitchCase="'6'">{{widget.text}}</h6>
+        </div>
+      </div>
+      <div *ngSwitchCase="'LINK'">
+        <!--<h1>Link</h1>-->
+        <a href="{{widget.href}}">{{widget.text}}</a>
+      </div>
+      <div *ngSwitchCase="'PARAGRAPH'">
+        <!--<h1>Paragraph</h1>-->
+        <p>{{widget.text}}</p>
+      </div>
+      <div *ngSwitchCase="'LIST'">
+        <!--<h1>ListWidget</h1>-->
+        <div [ngSwitch]="widget.listType">
+          <div *ngSwitchCase="'ORDERED'">
+            <ol class="list-group">
+              {{widget.text}}
+              <li class="list-group-item"
+                  *ngFor="let item of widget.listItems.split(',')">
+                {{item}}
+              </li>
+            </ol>
+          </div>
+          <div *ngSwitchCase="'UNORDERED'">
+            <ul class="list-group">
+              {{widget.text}}
+              <li class="list-group-item"
+                  *ngFor="let item of widget.listItems.split(',')">
+                {{item}}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div *ngSwitchCase="'IMAGE'">
+        <!--<h1>Image</h1>-->
+        <img src="{{widget.src}}" width="40%" height="40%" title={{widget.text}}/>
+      </div>
+
+    </div>
+  </div>
+</div>
