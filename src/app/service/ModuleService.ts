@@ -2,7 +2,7 @@ export class ModuleService {
 
   findAllModulesForCourse = (courseId) =>
     fetch
-    (`http://localhost:8080/api/student/courses/${courseId}/modules`)
+    (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/courses/${courseId}/modules`)
       .then(response => response.json())
 
 }

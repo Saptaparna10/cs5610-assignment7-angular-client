@@ -7,7 +7,7 @@ export class WidgetService {
 
   location: string;
   COURSE_URL: string;
-  HEROKU_BASE_URL = 'https://webdev-rastogi-shubham.herokuapp.com/api/course';
+  HEROKU_BASE_URL = 'https://das-saptaparna-assignment5-jav.herokuapp.com/api/course';
   LOCAL_BASE_URL = 'http://localhost:8080/api/course';
 
   constructor() {
@@ -21,7 +21,7 @@ export class WidgetService {
 
   findAllWidgetsForTopics = (courseId, moduleId, lessonId, topicId) =>
     fetch
-    (`http://localhost:8080/api/student/topics/${topicId}/widgets`)
+    (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/topics/${topicId}/widgets`)
       .then(response => response.json())
 
 

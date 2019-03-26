@@ -7,7 +7,7 @@ export class TopicService {
 
   location: string;
   COURSE_URL: string;
-  HEROKU_BASE_URL = 'https://webdev-rastogi-shubham.herokuapp.com/api/course';
+  HEROKU_BASE_URL = 'https://das-saptaparna-assignment5-jav.herokuapp.com/api/course';
   LOCAL_BASE_URL = 'http://localhost:8080/api/course';
 
   constructor() {
@@ -21,7 +21,7 @@ export class TopicService {
 
   findAllTopicsForLesson = (courseId, moduleId, lessonId) =>
     fetch
-    (`http://localhost:8080/api/student/lessons/${lessonId}/topics`)
+    (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/lessons/${lessonId}/topics`)
       .then(response => response.json())
 
 }
