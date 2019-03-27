@@ -24,18 +24,16 @@
         <!--<h1>ListWidget</h1>-->
         <div [ngSwitch]="widget.listType">
           <div *ngSwitchCase="'ORDERED'">
-            <ol class="list-group">
-              <!--{{widget.text}}-->
-              <li class="list-group-item"
+            <ol>
+              <li
                   *ngFor="let item of widget.listItems.split(',')">
                 {{item}}
               </li>
             </ol>
           </div>
           <div *ngSwitchCase="'UNORDERED'">
-            <ul class="list-group">
-              <!--{{widget.text}}-->
-              <li class="list-group-item"
+            <ul>
+              <li
                   *ngFor="let item of widget.listItems.split(',')">
                 {{item}}
               </li>
