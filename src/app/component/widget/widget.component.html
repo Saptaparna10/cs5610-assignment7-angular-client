@@ -25,7 +25,7 @@
         <div [ngSwitch]="widget.listType">
           <div *ngSwitchCase="'ORDERED'">
             <ol class="list-group">
-              {{widget.text}}
+              <!--{{widget.text}}-->
               <li class="list-group-item"
                   *ngFor="let item of widget.listItems.split(',')">
                 {{item}}
@@ -34,7 +34,7 @@
           </div>
           <div *ngSwitchCase="'UNORDERED'">
             <ul class="list-group">
-              {{widget.text}}
+              <!--{{widget.text}}-->
               <li class="list-group-item"
                   *ngFor="let item of widget.listItems.split(',')">
                 {{item}}
