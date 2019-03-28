@@ -23,4 +23,14 @@ export class LessonService {
     fetch
     (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/modules/${moduleId}/lessons`)
       .then(response => response.json())
+
+  findAllLessons = () =>
+    fetch
+    (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/lessons`)
+      .then(response => response.json())
+
+  findLessonById = (lessonId) =>
+    fetch
+    (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/lessons/${lessonId}`)
+      .then(response => response.json())
 }

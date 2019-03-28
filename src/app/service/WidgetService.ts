@@ -24,5 +24,14 @@ export class WidgetService {
     (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/topics/${topicId}/widgets`)
       .then(response => response.json())
 
+  findAllWidgets = () =>
+    fetch
+    (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/widget`)
+      .then(response => response.json())
+
+  findWidgetById = (wid) =>
+    fetch
+    (`https://das-saptaparna-assignment5-jav.herokuapp.com/api//widgets/${wid}`)
+      .then(response => response.json())
 
 }

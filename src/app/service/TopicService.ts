@@ -24,4 +24,14 @@ export class TopicService {
     (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/lessons/${lessonId}/topics`)
       .then(response => response.json())
 
+  findAllTopics = () =>
+    fetch
+    (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/lessons`)
+      .then(response => response.json())
+
+  findTopicById = (topicId) =>
+    fetch
+    (`https://das-saptaparna-assignment5-jav.herokuapp.com/api/student/topics/${topicId}`)
+      .then(response => response.json())
+
 }
